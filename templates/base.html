@@ -2,10 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     {% block styles %}
-    <!-- Adding Bootstrap-Flask styling here -->
-    {{ bootstrap.load_css() }} {% endblock %}
+    <!-- Load Bootstrap-Flask CSS here -->
+    {{ bootstrap.load_css() }}
+    <!-- Link to the styles.css here to apply styling to all the child templates.-->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    {% endblock %}
 
     <title>{% block title %}{% endblock %}</title>
   </head>
