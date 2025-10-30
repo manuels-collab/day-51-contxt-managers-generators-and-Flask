@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h2>{{user_data['username']}}</h2>
-<h2>{{user_data['password']}}</h2>
-</body>
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+	<body>
+        <div class="container">
+        {% extends "base.html" %}
+		{% from 'bootstrap5/form.html' import render_form%}
+		{% block title%}Login{% endblock%}
+		{% block content %}
+				<h1>Login</h1>
+			{{ render_form(form)}}
+			{% endblock%}
+        </div>
+	</body>
 </html>
